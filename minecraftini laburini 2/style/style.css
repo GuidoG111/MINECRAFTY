@@ -1,0 +1,326 @@
+:root {
+  --grass: #4caf50;
+  --dark-grass: #2e7d32;
+  --stone: #a9a9a9;
+  --dirt: #7b5e3c;
+  --sky: #87ceeb;
+  --lime: #b6ff5c;
+  --radius: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, var(--sky) 0%, var(--grass) 60%, var(--dirt) 100%);
+  color: #222;
+}
+
+
+.minecraft-header {
+  background: var(--dark-grass);
+}
+
+.bg-block {
+  background-color: var(--grass) !important;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.nav-link:hover {
+  color: var(--lime) !important;
+}
+
+.hero-minecraft {
+  position: relative;
+  padding-top: 120px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #b3f3a6, #72d36b);
+  background-image: url(https://cdn.wallpapersafari.com/62/99/vksAoI.png);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+
+.hero-minecraft::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: 0;
+}
+
+.hero-minecraft * {
+  position: relative;
+  z-index: 1;
+  padding-top: 10px;
+}
+
+.info-section {
+  background: #e8f6ec;
+  border-top: 8px solid var(--grass);
+  
+}
+
+
+.block-card {
+  background: linear-gradient(180deg, var(--grass), var(--dark-grass));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+.block-card:hover {
+  transform: translateY(-6px);
+  background: var(--lime);
+  color: #e8f6ec;
+}
+
+
+.contact-card {
+  border: 3px solid var(--grass);
+  border-radius: var(--radius);
+  background: white;
+}
+.contact-card input,
+.contact-card textarea {
+  border: 2px solid var(--stone);
+  border-radius: var(--radius);
+}
+.btn-lime {
+  background: var(--grass);
+  color: white;
+  border-radius: var(--radius);
+}
+.btn-lime:hover {
+  background: var(--dark-grass);
+}
+
+
+.quote-card {
+  background: #d8f3dc;
+  border-left: 8px solid var(--grass);
+  border-radius: var(--radius);
+  font-style: italic;
+}
+
+
+.minecraft-footer {
+  background: var(--dark-grass);
+  position: relative;
+}
+.social-block {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--grass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+  border: 2px solid var(--lime);
+}
+.social-block img {
+  width: 32px;
+  height: 32px;
+}
+.social-block:hover {
+  transform: scale(1.1);
+  background: var(--lime);
+}
+.responsive-video {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.opiniones-section {
+  background: linear-gradient(180deg, #3a7730, #1f4e1f);
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.opinion-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+ 
+}
+
+.opinion-card:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.opinion-card img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border: 3px solid #9fe75b; 
+}
+
+
+
+
+.info-card {
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.video-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+    backdrop-filter: blur(8px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 480px;
+  border-radius: 20px;
+}
+
+.video-frame:hover {
+  transform: scale(1.03) rotateX(3deg) rotateY(-3deg);
+  box-shadow: 0 0 30px rgba(76, 175, 80, 0.6);
+}
+
+.video-frame:hover .glow {
+  opacity: 1;
+}
+
+
+.info-section h2 {
+  font-size: 2.5em;
+  color: #1b5e20;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+
+.info-card:nth-child(1) { animation-delay: 0.2s; }
+.info-card:nth-child(2) { animation-delay: 0.4s; }
+.info-card:nth-child(3) { animation-delay: 0.6s; }
+.info-card:nth-child(4) { animation-delay: 0.8s; }
+.info-card:nth-child(5) { animation-delay: 1s; }
+.info-card:nth-child(6) { animation-delay: 1.2s; }
+
+.info-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.info-card i {
+  font-size: 2em;
+  color: #43a047;
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  color: #2e7d32;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-card {
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-section {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  border-top: 8px solid var(--grass);
+  padding: 80px 10%;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.info-section::before {
+  content: "";
+  background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+  opacity: 0.08;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
